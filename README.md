@@ -57,17 +57,45 @@ The notebook replaces 172 zero Cholesterol readings with the non-zero mean and r
   </tr>
 </table>
 
+## Zero-value cleanup: before and after
+
+These paired plots make the data-cleaning step easy to compare: the original distributions with zero readings are on the left, and the distributions after replacing those readings with the non-zero mean are on the right.
+
+### Cholesterol
+
+<table>
+  <tr>
+    <th>Before cleaning · zero readings present</th>
+    <th>After cleaning · zero readings replaced</th>
+  </tr>
+  <tr>
+    <td><img src="images/cholesterol_distribution.png" alt="Cholesterol distribution before replacing zero readings" width="460"></td>
+    <td><img src="images/cholesterol_after_replacement.png" alt="Cholesterol distribution after replacing zero readings with the non-zero mean" width="460"></td>
+  </tr>
+</table>
+
+### Resting blood pressure
+
+<table>
+  <tr>
+    <th>Before cleaning · zero reading present</th>
+    <th>After cleaning · zero reading replaced</th>
+  </tr>
+  <tr>
+    <td><img src="images/resting_bp_distribution.png" alt="Resting blood pressure distribution before replacing the zero reading" width="460"></td>
+    <td><img src="images/resting_bp_after_replacement.png" alt="Resting blood pressure distribution after replacing the zero reading with the non-zero mean" width="460"></td>
+  </tr>
+</table>
+
 <details>
-<summary><strong>Browse all 14 notebook charts</strong></summary>
+<summary><strong>Browse the other 6 notebook charts</strong></summary>
 
 | Visualization | Preview |
 |---|---|
+| Visualization | Preview |
+|---|---|
 | Numeric feature distributions | ![Four numeric feature histograms](images/numeric_features_panel.png) |
-| Resting blood pressure distribution | ![Resting blood pressure distribution](images/resting_bp_distribution.png) |
-| Cholesterol distribution | ![Cholesterol distribution](images/cholesterol_distribution.png) |
 | Maximum heart rate distribution | ![Maximum heart rate distribution](images/max_heart_rate_distribution.png) |
-| Cholesterol after zero-value replacement | ![Cholesterol distribution after cleaning](images/cholesterol_after_replacement.png) |
-| Resting blood pressure after zero-value replacement | ![Resting blood pressure after cleaning](images/resting_bp_after_replacement.png) |
 | Sex by target label | ![Heart disease counts by sex](images/sex_by_heart_disease.png) |
 | Fasting blood sugar by target label | ![Heart disease counts by fasting blood sugar](images/fasting_blood_sugar_by_heart_disease.png) |
 | Cholesterol by target label | ![Cholesterol distribution grouped by heart disease label](images/cholesterol_by_heart_disease.png) |
