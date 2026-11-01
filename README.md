@@ -35,20 +35,12 @@ This project uses Python to explore a public heart disease dataset, visualize pa
 
 <br><br><br><br>
 
-# 🔄 Analysis Flow
+# 🔄 How the Analysis Works
 
-```mermaid
-flowchart LR
-    A[heart.csv] --> B[Inspect columns and summary statistics]
-    B --> C[Explore distributions and target relationships]
-    C --> D[Review implausible zero measurements]
-    D --> E[Replace zero Cholesterol and RestingBP readings]
-    E --> F[One-hot encode categorical features]
-    F --> G[Scale selected numeric features]
-    G --> H[Prepared data_encode table]
-```
+The notebook moves through six steps, from the source file to a prepared feature table:
 
-The notebook replaces 172 zero Cholesterol readings with the non-zero mean and replaces one zero RestingBP reading with its non-zero mean. It then one-hot encodes categorical columns and scales the selected numeric columns. The original CSV is included so the analysis can be reproduced.
+![Six-step notebook workflow showing data loading, exploration, zero-value cleaning, one-hot encoding, scaling, and the prepared data_encode table.](images/analysis_flow.svg)
+
 
 <br><br><br><br>
 
