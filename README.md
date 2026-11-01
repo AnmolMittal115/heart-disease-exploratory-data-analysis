@@ -18,7 +18,7 @@
 
 This project uses Python to explore a public heart disease dataset, visualize patterns across clinical and demographic features, and prepare the data for a future modeling step. It focuses on making the data easier to inspect and understand before any predictive model is considered.
 
-> 💡 **Project scope:** this repository contains exploratory data analysis and preprocessing. It does not train or evaluate a classifier, and its charts are descriptive rather than clinical guidance.
+> 💡 **Project scope:** this repository contains exploratory data analysis and preprocessing. Its charts are descriptive rather than clinical guidance.
 
 <br><br>
 
