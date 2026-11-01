@@ -56,12 +56,12 @@ The notebook replaces 172 zero Cholesterol readings with the non-zero mean and r
 
 <table>
   <tr>
-    <td align="center"><strong>🎯 Target label distribution</strong><br><img src="images/heart_disease_target_distribution.png" alt="Counts of heart disease target labels" width="460"><br><em>🧠 There are slightly more label-1 records than label-0 records (508 vs. 410).</em></td>
-    <td align="center"><strong>🎂 Age distribution</strong><br><img src="images/age_distribution.png" alt="Age distribution in the dataset" width="460"><br><em>🧠 Most records are between 47 and 60 years old; the median age is 54.</em></td>
+    <td align="center"><strong>🎯 Target label distribution</strong><br><img src="images/heart_disease_target_distribution.png" alt="Counts of heart disease target labels" width="460"><br><em>🧠 There are slightly more people with heart disease (508) than without it (410).</em></td>
+    <td align="center"><strong>🎂 Age distribution</strong><br><img src="images/age_distribution.png" alt="Age distribution in the dataset" width="460"><br><em>🧠 Most people in this dataset are between 47 and 60 years old.</em></td>
   </tr>
   <tr>
-    <td align="center"><strong>🫀 Chest pain type by target label</strong><br><img src="images/chest_pain_by_heart_disease.png" alt="Heart disease counts by chest pain type" width="460"><br><em>🧠 ATA and NAP have more label-0 records; ASY has many more label-1 records; TA is nearly even, with slightly more label-0.</em></td>
-    <td align="center"><strong>🔗 Numeric feature correlation heatmap</strong><br><img src="images/numeric_correlation_heatmap.png" alt="Correlation heatmap for numeric features" width="460"><br><em>🧠 Label 1 is more associated with higher Oldpeak and lower MaxHR. Cholesterol shows little relationship in this heatmap.</em></td>
+    <td align="center"><strong>🫀 Chest pain type by target label</strong><br><img src="images/chest_pain_by_heart_disease.png" alt="Heart disease counts by chest pain type" width="460"><br><em>🧠 For ATA and NAP, the no-heart-disease bar is higher. For ASY, the heart-disease bar is much higher. TA is almost even.</em></td>
+    <td align="center"><strong>🔗 Numeric feature correlation heatmap</strong><br><img src="images/numeric_correlation_heatmap.png" alt="Correlation heatmap for numeric features" width="460"><br><em>🧠 In this dataset, heart disease is linked with higher Oldpeak and lower MaxHR. Cholesterol shows no clear pattern here.</em></td>
   </tr>
 </table>
 
@@ -84,7 +84,7 @@ These paired plots make the data-cleaning step easy to compare: the original dis
   </tr>
 </table>
 
-**🧹 Simple takeaway:** 172 Cholesterol values are zero. They were replaced with **244.64**. The zero bar disappears, but a new bar appears at 244.64 because every replaced value is the same.
+**🧹 Simple takeaway:** 172 Cholesterol values were zero. Each was replaced with the average value, **244.64**. That is why a new tall bar appears at 244.64.
 
 ## 🩺 Resting blood pressure
 
@@ -99,19 +99,19 @@ These paired plots make the data-cleaning step easy to compare: the original dis
   </tr>
 </table>
 
-**🧹 Simple takeaway:** One RestingBP value is zero. It was replaced with **132.54 mmHg**. Since only one record changes, the graph barely changes.
+**🧹 Simple takeaway:** One RestingBP value was zero. It was replaced with the average, **132.54 mmHg**, so the graph barely changes.
 
 <details>
 <summary><strong>📂 Browse the other 6 notebook charts</strong></summary>
 
 | Visualization | Preview | Simple takeaway |
 |---|---|---|
-| 🧭 Numeric feature distributions | ![Four numeric feature histograms](images/numeric_features_panel.png) | 🧠 The panel shows many zero Cholesterol values and one zero RestingBP value. Age and MaxHR mostly fall in the middle of their ranges. |
-| ❤️‍🔥 Maximum heart rate distribution | ![Maximum heart rate distribution](images/max_heart_rate_distribution.png) | 🧠 Most maximum heart-rate readings are between 120 and 156 bpm. |
-| 👥 Sex by target label | ![Heart disease counts by sex](images/sex_by_heart_disease.png) | 🧠 Among men, there are more label-1 than label-0 records. Among women, there are more label-0 than label-1 records. |
-| 🩸 Fasting blood sugar by target label | ![Heart disease counts by fasting blood sugar](images/fasting_blood_sugar_by_heart_disease.png) | 🧠 With FastingBS=1, there are more label-1 than label-0 records (170 vs. 44). With FastingBS=0, the counts are close, with slightly more label-0 records (366 vs. 338). |
-| 🧪 Cholesterol by target label | ![Cholesterol distribution grouped by heart disease label](images/cholesterol_by_heart_disease.png) | 🧠 The two groups overlap a lot. The median Cholesterol value is a little higher for label 1 (244.64 vs. 235). |
-| 🎂 Age by target label | ![Age distribution grouped by heart disease label](images/age_by_heart_disease.png) | 🧠 The label-1 group is older in this dataset (median 57 vs. 51), but the age ranges overlap. |
+| 🧭 Numeric feature distributions | ![Four numeric feature histograms](images/numeric_features_panel.png) | 🧠 The chart shows many zero Cholesterol values and one zero RestingBP value. Most Age and MaxHR values sit near the middle of their ranges. |
+| ❤️‍🔥 Maximum heart rate distribution | ![Maximum heart rate distribution](images/max_heart_rate_distribution.png) | 🧠 Most people reached a maximum heart rate between 120 and 156 bpm. |
+| 👥 Sex by target label | ![Heart disease counts by sex](images/sex_by_heart_disease.png) | 🧠 The chart shows more men with heart disease than without it. For women, it shows more without heart disease than with it. |
+| 🩸 Fasting blood sugar by target label | ![Heart disease counts by fasting blood sugar](images/fasting_blood_sugar_by_heart_disease.png) | 🧠 When FastingBS is 1, the heart-disease bar is much higher (170 vs. 44). When it is 0, the bars are close, with slightly more no-heart-disease cases (366 vs. 338). |
+| 🧪 Cholesterol by target label | ![Cholesterol distribution grouped by heart disease label](images/cholesterol_by_heart_disease.png) | 🧠 Cholesterol values for the two groups look similar and overlap. The middle value is a little higher for the heart-disease group. |
+| 🎂 Age by target label | ![Age distribution grouped by heart disease label](images/age_by_heart_disease.png) | 🧠 People with heart disease tend to be older in this dataset, but the age ranges overlap. |
 
 </details>
 
