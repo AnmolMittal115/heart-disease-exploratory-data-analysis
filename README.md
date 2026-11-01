@@ -92,8 +92,6 @@ These paired plots make the data-cleaning step easy to compare: the original dis
 
 | Visualization | Preview |
 |---|---|
-| Visualization | Preview |
-|---|---|
 | Numeric feature distributions | ![Four numeric feature histograms](images/numeric_features_panel.png) |
 | Maximum heart rate distribution | ![Maximum heart rate distribution](images/max_heart_rate_distribution.png) |
 | Sex by target label | ![Heart disease counts by sex](images/sex_by_heart_disease.png) |
