@@ -56,12 +56,12 @@ The notebook replaces 172 zero Cholesterol readings with the non-zero mean and r
 
 <table>
   <tr>
-    <td align="center"><strong>🎯 Target label distribution</strong><br><img src="images/heart_disease_target_distribution.png" alt="Counts of heart disease target labels" width="460"><br><em>🧠 508 positive vs 410 negative labels (55% vs 45%); both classes are represented. For a binary target, read the bars and ignore the KDE curve.</em></td>
-    <td align="center"><strong>🎂 Age distribution</strong><br><img src="images/age_distribution.png" alt="Age distribution in the dataset" width="460"><br><em>🧠 Median age is 54; the middle half of records falls between 47 and 60 years.</em></td>
+    <td align="center"><strong>🎯 Target label distribution</strong><br><img src="images/heart_disease_target_distribution.png" alt="Counts of heart disease target labels" width="460"><br><em>🧠 There are slightly more label-1 records than label-0 records (508 vs. 410).</em></td>
+    <td align="center"><strong>🎂 Age distribution</strong><br><img src="images/age_distribution.png" alt="Age distribution in the dataset" width="460"><br><em>🧠 Most records are between 47 and 60 years old; the median age is 54.</em></td>
   </tr>
   <tr>
-    <td align="center"><strong>🫀 Chest pain type by target label</strong><br><img src="images/chest_pain_by_heart_disease.png" alt="Heart disease counts by chest pain type" width="460"><br><em>🧠 ASY has 392/496 positive labels (79%); ATA has 149/173 negative labels (86%). These within-category shares describe this dataset, not individual risk.</em></td>
-    <td align="center"><strong>🔗 Numeric feature correlation heatmap</strong><br><img src="images/numeric_correlation_heatmap.png" alt="Correlation heatmap for numeric features" width="460"><br><em>🧠 Oldpeak and MaxHR have the strongest linear correlations with the target (about +0.40 and −0.40); Cholesterol is weak (+0.09). Correlation alone does not show causation or model value.</em></td>
+    <td align="center"><strong>🫀 Chest pain type by target label</strong><br><img src="images/chest_pain_by_heart_disease.png" alt="Heart disease counts by chest pain type" width="460"><br><em>🧠 ATA and NAP have more label-0 records; ASY has many more label-1 records; TA is nearly even, with slightly more label-0.</em></td>
+    <td align="center"><strong>🔗 Numeric feature correlation heatmap</strong><br><img src="images/numeric_correlation_heatmap.png" alt="Correlation heatmap for numeric features" width="460"><br><em>🧠 Label 1 is more associated with higher Oldpeak and lower MaxHR. Cholesterol shows little relationship in this heatmap.</em></td>
   </tr>
 </table>
 
@@ -84,7 +84,7 @@ These paired plots make the data-cleaning step easy to compare: the original dis
   </tr>
 </table>
 
-**🔎 What stands out:** 172 of 918 readings (18.7%) are zero, creating a large spike that is more consistent with an unavailable or invalid entry than a measured cholesterol value. After mean replacement, that spike disappears but a tall spike appears around **244.64** because every replaced row receives the same value. This removes zeros while creating an imputation artifact and can understate variability.
+**🧹 Simple takeaway:** 172 Cholesterol values are zero. They were replaced with **244.64**. The zero bar disappears, but a new bar appears at 244.64 because every replaced value is the same.
 
 ## 🩺 Resting blood pressure
 
@@ -99,19 +99,19 @@ These paired plots make the data-cleaning step easy to compare: the original dis
   </tr>
 </table>
 
-**What stands out:** there is one zero reading in 918 rows. It is replaced with the non-zero mean (**132.54 mmHg**). Since just one record changes, the overall distribution remains nearly the same; the plots use different histogram bins and vertical scales, so compare the overall pattern rather than bar heights.
+**🧹 Simple takeaway:** One RestingBP value is zero. It was replaced with **132.54 mmHg**. Since only one record changes, the graph barely changes.
 
 <details>
 <summary><strong>📂 Browse the other 6 notebook charts</strong></summary>
 
-| Visualization | Preview | What it suggests |
+| Visualization | Preview | Simple takeaway |
 |---|---|---|
-| 🧭 Numeric feature distributions | ![Four numeric feature histograms](images/numeric_features_panel.png) | 🧠 The panel exposes a large zero spike in Cholesterol and a single zero RestingBP reading; Age and MaxHR are broadly centered in their observed ranges. |
-| ❤️‍🔥 Maximum heart rate distribution | ![Maximum heart rate distribution](images/max_heart_rate_distribution.png) | 🧠 Median MaxHR is 138 bpm, and the middle half ranges from 120 to 156 bpm. The plot is not split by target label. |
-| 👥 Sex by target label | ![Heart disease counts by sex](images/sex_by_heart_disease.png) | 🧠 Positive labels are 458/725 among men (63%) and 50/193 among women (26%) in this sample. The groups differ in size, so raw counts alone are misleading; these are descriptive, unadjusted shares. |
-| 🩸 Fasting blood sugar by target label | ![Heart disease counts by fasting blood sugar](images/fasting_blood_sugar_by_heart_disease.png) | 🧠 Positive labels are 170/214 (79%) for FastingBS=1 and 338/704 (48%) for FastingBS=0. This is a sample association, not evidence that fasting blood sugar caused the label. |
-| 🧪 Cholesterol by target label | ![Cholesterol distribution grouped by heart disease label](images/cholesterol_by_heart_disease.png) | 🧠 The median is 244.64 for label 1 and 235 for label 0, but the middle ranges overlap substantially. Replacing many zeros with one mean value also affects this distribution. |
-| 🎂 Age by target label | ![Age distribution grouped by heart disease label](images/age_by_heart_disease.png) | 🧠 Median age is 57 for label 1 and 51 for label 0. The distributions overlap, so age shows a sample-level association rather than a clean separation. |
+| 🧭 Numeric feature distributions | ![Four numeric feature histograms](images/numeric_features_panel.png) | 🧠 The panel shows many zero Cholesterol values and one zero RestingBP value. Age and MaxHR mostly fall in the middle of their ranges. |
+| ❤️‍🔥 Maximum heart rate distribution | ![Maximum heart rate distribution](images/max_heart_rate_distribution.png) | 🧠 Most maximum heart-rate readings are between 120 and 156 bpm. |
+| 👥 Sex by target label | ![Heart disease counts by sex](images/sex_by_heart_disease.png) | 🧠 Among men, there are more label-1 than label-0 records. Among women, there are more label-0 than label-1 records. |
+| 🩸 Fasting blood sugar by target label | ![Heart disease counts by fasting blood sugar](images/fasting_blood_sugar_by_heart_disease.png) | 🧠 With FastingBS=1, there are more label-1 than label-0 records (170 vs. 44). With FastingBS=0, the counts are close, with slightly more label-0 records (366 vs. 338). |
+| 🧪 Cholesterol by target label | ![Cholesterol distribution grouped by heart disease label](images/cholesterol_by_heart_disease.png) | 🧠 The two groups overlap a lot. The median Cholesterol value is a little higher for label 1 (244.64 vs. 235). |
+| 🎂 Age by target label | ![Age distribution grouped by heart disease label](images/age_by_heart_disease.png) | 🧠 The label-1 group is older in this dataset (median 57 vs. 51), but the age ranges overlap. |
 
 </details>
 
