@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
+  <title id="title">Heart disease exploratory data analysis workflow</title>
+  <desc id="desc">Six steps: load the heart.csv data, explore it, replace zero cholesterol and resting blood pressure values with non-zero means, encode categories, scale selected numeric features, and prepare the data_encode table.</desc>
+  <rect width="1200" height="400" rx="22" fill="#F7F9FC"/>
+  <text x="600" y="48" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="0.7" fill="#183153">FROM RAW DATA TO A READY-TO-USE TABLE</text>
+  <text x="600" y="76" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#64748B">Six simple steps in the notebook</text>
+
+  <line x1="205" y1="241" x2="218" y2="241" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="218,235 226,241 218,247" fill="#94A3B8"/>
+  <line x1="397" y1="241" x2="410" y2="241" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="410,235 418,241 410,247" fill="#94A3B8"/>
+  <line x1="589" y1="241" x2="602" y2="241" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="602,235 610,241 602,247" fill="#94A3B8"/>
+  <line x1="781" y1="241" x2="794" y2="241" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="794,235 802,241 794,247" fill="#94A3B8"/>
+  <line x1="973" y1="241" x2="986" y2="241" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="986,235 994,241 986,247" fill="#94A3B8"/>
+
+  <g font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">
+    <g>
+      <rect x="35" y="130" width="170" height="220" rx="18" fill="#EAF4FF"/>
+      <rect x="35" y="130" width="170" height="5" rx="2.5" fill="#2D7FF9"/>
+      <circle cx="120" cy="166" r="17" fill="#2D7FF9"/>
+      <text x="120" y="171" font-size="12" font-weight="700" fill="#FFFFFF">01</text>
+      <text x="120" y="207" font-size="15" font-weight="700" fill="#183153">Load Data</text>
+      <text x="120" y="239" font-size="13" fill="#52657A">Read the original</text>
+      <text x="120" y="260" font-size="13" font-weight="600" fill="#2D7FF9">heart.csv file</text>
+    </g>
+    <g>
+      <rect x="227" y="130" width="170" height="220" rx="18" fill="#F3EEFF"/>
+      <rect x="227" y="130" width="170" height="5" rx="2.5" fill="#8754E8"/>
+      <circle cx="312" cy="166" r="17" fill="#8754E8"/>
+      <text x="312" y="171" font-size="12" font-weight="700" fill="#FFFFFF">02</text>
+      <text x="312" y="207" font-size="15" font-weight="700" fill="#183153">Explore Data</text>
+      <text x="312" y="235" font-size="13" fill="#52657A">Review columns,</text>
+      <text x="312" y="255" font-size="13" fill="#52657A">summary statistics,</text>
+      <text x="312" y="275" font-size="13" fill="#52657A">and feature patterns</text>
+    </g>
+    <g>
+      <rect x="419" y="130" width="170" height="220" rx="18" fill="#FFF4E5"/>
+      <rect x="419" y="130" width="170" height="5" rx="2.5" fill="#F08C00"/>
+      <circle cx="504" cy="166" r="17" fill="#F08C00"/>
+      <text x="504" y="171" font-size="12" font-weight="700" fill="#FFFFFF">03</text>
+      <text x="504" y="207" font-size="15" font-weight="700" fill="#183153">Fix Zero Values</text>
+      <text x="504" y="229" font-size="12.5" fill="#52657A">Replace 172 zero</text>
+      <text x="504" y="248" font-size="12.5" fill="#52657A">Cholesterol values +</text>
+      <text x="504" y="267" font-size="12.5" fill="#52657A">1 zero RestingBP value</text>
+      <text x="504" y="286" font-size="12.5" fill="#52657A">with non-zero means</text>
+    </g>
+    <g>
+      <rect x="611" y="130" width="170" height="220" rx="18" fill="#E6FAF5"/>
+      <rect x="611" y="130" width="170" height="5" rx="2.5" fill="#0CA678"/>
+      <circle cx="696" cy="166" r="17" fill="#0CA678"/>
+      <text x="696" y="171" font-size="12" font-weight="700" fill="#FFFFFF">04</text>
+      <text x="696" y="207" font-size="15" font-weight="700" fill="#183153">Encode Categories</text>
+      <text x="696" y="239" font-size="13" fill="#52657A">One-hot encode</text>
+      <text x="696" y="260" font-size="13" fill="#52657A">categorical columns</text>
+    </g>
+    <g>
+      <rect x="803" y="130" width="170" height="220" rx="18" fill="#EBF8EE"/>
+      <rect x="803" y="130" width="170" height="5" rx="2.5" fill="#37A65A"/>
+      <circle cx="888" cy="166" r="17" fill="#37A65A"/>
+      <text x="888" y="171" font-size="12" font-weight="700" fill="#FFFFFF">05</text>
+      <text x="888" y="207" font-size="15" font-weight="700" fill="#183153">Scale Features</text>
+      <text x="888" y="239" font-size="13" fill="#52657A">Scale selected</text>
+      <text x="888" y="260" font-size="13" fill="#52657A">numeric columns</text>
+    </g>
+    <g>
+      <rect x="995" y="130" width="170" height="220" rx="18" fill="#E8EEFF"/>
+      <rect x="995" y="130" width="170" height="5" rx="2.5" fill="#4157C9"/>
+      <circle cx="1080" cy="166" r="17" fill="#4157C9"/>
+      <text x="1080" y="171" font-size="12" font-weight="700" fill="#FFFFFF">06</text>
+      <text x="1080" y="207" font-size="15" font-weight="700" fill="#183153">Prepared Table</text>
+      <text x="1080" y="239" font-size="13" fill="#52657A">Ready-to-use</text>
+      <text x="1080" y="260" font-family="Consolas, monospace" font-size="13" font-weight="600" fill="#4157C9">data_encode</text>
+    </g>
+  </g>
+</svg>
