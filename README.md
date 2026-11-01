@@ -8,7 +8,7 @@
 
 ## Project at a glance
 
-| | |
+| **Item** | **Details** |
 |---|---|
 | **Dataset** | 918 records · 11 input features |
 | **Target** | `HeartDisease` · 0 = no heart disease · 1 = heart disease |
@@ -193,6 +193,6 @@ The CSV follows the **Heart Failure Prediction** dataset schema published by [fe
 
 ---
 
-## Project scope
+## Future modeling note
 
-This is an exploratory data analysis and preprocessing project. It does not train or evaluate a classifier. If modeling is added later, split the data first and fit preprocessing steps on the training set only to avoid data leakage.
+If you add model training later, split the data first and fit preprocessing steps on the training set only to avoid data leakage.
