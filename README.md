@@ -1,6 +1,6 @@
 <div align="center">
 
-# ❤️ Heart Disease Exploratory Analysis
+# ❤️ HEART DISEASE EXPLORATORY ANALYSIS
 
 **A notebook-based exploration of heart disease data, from first look to a cleaned and scaled feature table.**
 
@@ -14,7 +14,7 @@
 
 <br><br><br>
 
-# 💡 Why this project
+# 💡 Why This Project
 
 This project uses Python to explore a public heart disease dataset, visualize patterns across clinical and demographic features, and prepare the data for a future modeling step. It focuses on making the data easier to inspect and understand before any predictive model is considered.
 
@@ -22,7 +22,7 @@ This project uses Python to explore a public heart disease dataset, visualize pa
 
 <br><br><br>
 
-# 📌 At a glance
+# 📌 At a Glance
 
 | | |
 |---|---|
@@ -35,7 +35,7 @@ This project uses Python to explore a public heart disease dataset, visualize pa
 
 <br><br><br>
 
-# 🔄 Analysis flow
+# 🔄 Analysis Flow
 
 ```mermaid
 flowchart LR
@@ -52,7 +52,7 @@ The notebook replaces 172 zero Cholesterol readings with the non-zero mean and r
 
 <br><br><br>
 
-# 📊 A look at the data
+# 📊 A Look at the Data
 
 <table>
   <tr>
@@ -67,7 +67,7 @@ The notebook replaces 172 zero Cholesterol readings with the non-zero mean and r
 
 <br><br><br>
 
-# 🧹 Zero-value cleanup: before and after
+# 🧹 Zero-Value Cleanup: Before and After
 
 These paired plots make the data-cleaning step easy to compare: the original distributions with zero readings are on the left, and the distributions after replacing those readings with the non-zero mean are on the right.
 
@@ -86,7 +86,7 @@ These paired plots make the data-cleaning step easy to compare: the original dis
 
 **🧹 Simple takeaway:** 172 Cholesterol values were zero. Each was replaced with the average value, **244.64**. That is why a new tall bar appears at 244.64.
 
-## 🩺 Resting blood pressure
+## 🩺 Resting Blood Pressure
 
 <table>
   <tr>
@@ -117,7 +117,7 @@ These paired plots make the data-cleaning step easy to compare: the original dis
 
 <br><br><br>
 
-# 🧭 What the notebook covers
+# 🧭 What the Notebook Covers
 
 - 🔍 Initial inspection, summary statistics, and feature types
 - 📊 Univariate distributions for numeric variables
@@ -131,7 +131,7 @@ If model training is added later, the data should be split first and the scaler 
 
 <br><br><br>
 
-# 💻 Run it locally
+# 💻 Run It Locally
 
 🧑‍💻 You’ll need Python 3.10 or newer.
 
@@ -158,7 +158,7 @@ jupyter notebook heart_disease_eda.ipynb
 
 <br><br><br>
 
-# 📁 Repository contents
+# 📁 Repository Contents
 
 ```text
 heart-disease-exploratory-data-analysis/
