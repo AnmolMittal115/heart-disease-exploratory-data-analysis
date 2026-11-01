@@ -1,6 +1,6 @@
 <div align="center">
 
-# ❤️ HEART DISEASE EXPLORATORY ANALYSIS
+# ❤️ Heart Disease Exploratory Analysis
 
 **A notebook-based exploration of heart disease data, from first look to a cleaned and scaled feature table.**
 
@@ -12,7 +12,7 @@
 
 ---
 
-<br><br><br>
+<br><br><br><br>
 
 # 💡 Why This Project
 
@@ -20,7 +20,7 @@ This project uses Python to explore a public heart disease dataset, visualize pa
 
 > 💡 **Project scope:** this repository contains exploratory data analysis and preprocessing. Its charts are descriptive rather than clinical guidance.
 
-<br><br><br>
+<br><br><br><br>
 
 # 📌 At a Glance
 
@@ -33,7 +33,7 @@ This project uses Python to explore a public heart disease dataset, visualize pa
 | **🛠️ Tools** | Python · pandas · NumPy · Seaborn · Matplotlib · scikit-learn |
 | **📓 Main artifact** | `heart_disease_eda.ipynb` |
 
-<br><br><br>
+<br><br><br><br>
 
 # 🔄 Analysis Flow
 
@@ -50,7 +50,7 @@ flowchart LR
 
 The notebook replaces 172 zero Cholesterol readings with the non-zero mean and replaces one zero RestingBP reading with its non-zero mean. It then one-hot encodes categorical columns and scales the selected numeric columns. The original CSV is included so the analysis can be reproduced.
 
-<br><br><br>
+<br><br><br><br>
 
 # 📊 A Look at the Data
 
@@ -65,7 +65,7 @@ The notebook replaces 172 zero Cholesterol readings with the non-zero mean and r
   </tr>
 </table>
 
-<br><br><br>
+<br><br><br><br>
 
 # 🧹 Zero-Value Cleanup: Before and After
 
@@ -115,7 +115,7 @@ These paired plots make the data-cleaning step easy to compare: the original dis
 
 </details>
 
-<br><br><br>
+<br><br><br><br>
 
 # 🧭 What the Notebook Covers
 
@@ -129,7 +129,7 @@ These paired plots make the data-cleaning step easy to compare: the original dis
 
 If model training is added later, the data should be split first and the scaler fitted on training data only (for example, in a scikit-learn pipeline) to avoid leakage.
 
-<br><br><br>
+<br><br><br><br>
 
 # 💻 Run It Locally
 
@@ -156,7 +156,7 @@ jupyter notebook heart_disease_eda.ipynb
 
 ▶️ Run the notebook cells from top to bottom. The CSV is read from the repository root.
 
-<br><br><br>
+<br><br><br><br>
 
 # 📁 Repository Contents
 
@@ -169,7 +169,7 @@ heart-disease-exploratory-data-analysis/
 └── README.md
 ```
 
-<br><br><br>
+<br><br><br><br>
 
 # 🗂️ Dataset
 
