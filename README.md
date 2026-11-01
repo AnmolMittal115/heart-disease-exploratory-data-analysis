@@ -12,17 +12,17 @@
 
 ---
 
-<br><br>
+<br><br><br>
 
-## 💡 Why this project
+### 💡 Why this project
 
 This project uses Python to explore a public heart disease dataset, visualize patterns across clinical and demographic features, and prepare the data for a future modeling step. It focuses on making the data easier to inspect and understand before any predictive model is considered.
 
 > 💡 **Project scope:** this repository contains exploratory data analysis and preprocessing. Its charts are descriptive rather than clinical guidance.
 
-<br><br>
+<br><br><br>
 
-## 📌 At a glance
+### 📌 At a glance
 
 | | |
 |---|---|
@@ -33,9 +33,9 @@ This project uses Python to explore a public heart disease dataset, visualize pa
 | **🛠️ Tools** | Python · pandas · NumPy · Seaborn · Matplotlib · scikit-learn |
 | **📓 Main artifact** | `heart_disease_eda.ipynb` |
 
-<br><br>
+<br><br><br>
 
-## 🔄 Analysis flow
+### 🔄 Analysis flow
 
 ```mermaid
 flowchart LR
@@ -50,9 +50,9 @@ flowchart LR
 
 The notebook replaces 172 zero Cholesterol readings with the non-zero mean and replaces one zero RestingBP reading with its non-zero mean. It then one-hot encodes categorical columns and scales the selected numeric columns. The original CSV is included so the analysis can be reproduced.
 
-<br><br>
+<br><br><br>
 
-## 📊 A look at the data
+### 📊 A look at the data
 
 <table>
   <tr>
@@ -65,13 +65,13 @@ The notebook replaces 172 zero Cholesterol readings with the non-zero mean and r
   </tr>
 </table>
 
-<br><br>
+<br><br><br>
 
-## 🧹 Zero-value cleanup: before and after
+### 🧹 Zero-value cleanup: before and after
 
 These paired plots make the data-cleaning step easy to compare: the original distributions with zero readings are on the left, and the distributions after replacing those readings with the non-zero mean are on the right.
 
-### 🧪 Cholesterol
+## 🧪 Cholesterol
 
 <table>
   <tr>
@@ -86,7 +86,7 @@ These paired plots make the data-cleaning step easy to compare: the original dis
 
 **🔎 What stands out:** 172 of 918 readings (18.7%) are zero, creating a large spike that is more consistent with an unavailable or invalid entry than a measured cholesterol value. After mean replacement, that spike disappears but a tall spike appears around **244.64** because every replaced row receives the same value. This removes zeros while creating an imputation artifact and can understate variability.
 
-### 🩺 Resting blood pressure
+## 🩺 Resting blood pressure
 
 <table>
   <tr>
@@ -115,9 +115,9 @@ These paired plots make the data-cleaning step easy to compare: the original dis
 
 </details>
 
-<br><br>
+<br><br><br>
 
-## 🧭 What the notebook covers
+### 🧭 What the notebook covers
 
 - 🔍 Initial inspection, summary statistics, and feature types
 - 📊 Univariate distributions for numeric variables
@@ -129,9 +129,9 @@ These paired plots make the data-cleaning step easy to compare: the original dis
 
 If model training is added later, the data should be split first and the scaler fitted on training data only (for example, in a scikit-learn pipeline) to avoid leakage.
 
-<br><br>
+<br><br><br>
 
-## 💻 Run it locally
+### 💻 Run it locally
 
 🧑‍💻 You’ll need Python 3.10 or newer.
 
@@ -156,9 +156,9 @@ jupyter notebook heart_disease_eda.ipynb
 
 ▶️ Run the notebook cells from top to bottom. The CSV is read from the repository root.
 
-<br><br>
+<br><br><br>
 
-## 📁 Repository contents
+### 📁 Repository contents
 
 ```text
 heart-disease-exploratory-data-analysis/
@@ -169,9 +169,9 @@ heart-disease-exploratory-data-analysis/
 └── README.md
 ```
 
-<br><br>
+<br><br><br>
 
-## 🗂️ Dataset
+### 🗂️ Dataset
 
 📚 The CSV follows the **Heart Failure Prediction** dataset schema published by [fedesoriano on Kaggle](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction). It includes age, sex, chest pain type, blood pressure, cholesterol, fasting blood sugar, ECG results, maximum heart rate, exercise-induced angina, Oldpeak, ST slope, and the `HeartDisease` target.
 
