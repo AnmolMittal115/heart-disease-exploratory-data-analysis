@@ -122,8 +122,8 @@ If model training is added later, the data should be split first and the scaler 
 You’ll need Python 3.10 or newer.
 
 ```bash
-git clone https://github.com/AnmolMittal115/heart-disease-eda.git
-cd heart-disease-eda
+git clone https://github.com/AnmolMittal115/heart-disease-exploratory-data-analysis.git
+cd heart-disease-exploratory-data-analysis
 python -m venv .venv
 ```
 
@@ -145,7 +145,7 @@ Run the notebook cells from top to bottom. The CSV is read from the repository r
 ## Repository contents
 
 ```text
-heart-disease-eda/
+heart-disease-exploratory-data-analysis/
 ├── heart_disease_eda.ipynb   # EDA and preprocessing walkthrough
 ├── heart.csv                 # Source dataset used by the notebook
 ├── requirements.txt          # Python dependencies
