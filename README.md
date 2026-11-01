@@ -118,7 +118,7 @@ If model training is added later, the data should be split first and the scaler 
 You’ll need Python 3.10 or newer.
 
 ```bash
-git clone https://github.com/AnmolMittal115/heart-disease-eda-cost-analysis.git
+git clone https://github.com/AnmolMittal115/heart-disease-eda.git
 cd heart-disease-eda
 python -m venv .venv
 ```
