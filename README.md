@@ -12,11 +12,15 @@
 
 ---
 
+<br><br>
+
 ## 💡 Why this project
 
 This project uses Python to explore a public heart disease dataset, visualize patterns across clinical and demographic features, and prepare the data for a future modeling step. It focuses on making the data easier to inspect and understand before any predictive model is considered.
 
 > 💡 **Project scope:** this repository contains exploratory data analysis and preprocessing. It does not train or evaluate a classifier, and its charts are descriptive rather than clinical guidance.
+
+<br><br>
 
 ## 📌 At a glance
 
@@ -28,6 +32,8 @@ This project uses Python to explore a public heart disease dataset, visualize pa
 | **📊 Target counts** | 410 labeled 0 · 508 labeled 1 |
 | **🛠️ Tools** | Python · pandas · NumPy · Seaborn · Matplotlib · scikit-learn |
 | **📓 Main artifact** | `heart_disease_eda.ipynb` |
+
+<br><br>
 
 ## 🔄 Analysis flow
 
@@ -44,6 +50,8 @@ flowchart LR
 
 The notebook replaces 172 zero Cholesterol readings with the non-zero mean and replaces one zero RestingBP reading with its non-zero mean. It then one-hot encodes categorical columns and scales the selected numeric columns. The original CSV is included so the analysis can be reproduced.
 
+<br><br>
+
 ## 📊 A look at the data
 
 <table>
@@ -56,6 +64,8 @@ The notebook replaces 172 zero Cholesterol readings with the non-zero mean and r
     <td align="center"><strong>🔗 Numeric feature correlation heatmap</strong><br><img src="images/numeric_correlation_heatmap.png" alt="Correlation heatmap for numeric features" width="460"><br><em>🧠 Oldpeak and MaxHR have the strongest linear correlations with the target (about +0.40 and −0.40); Cholesterol is weak (+0.09). Correlation alone does not show causation or model value.</em></td>
   </tr>
 </table>
+
+<br><br>
 
 ## 🧹 Zero-value cleanup: before and after
 
@@ -105,6 +115,8 @@ These paired plots make the data-cleaning step easy to compare: the original dis
 
 </details>
 
+<br><br>
+
 ## 🧭 What the notebook covers
 
 - 🔍 Initial inspection, summary statistics, and feature types
@@ -116,6 +128,8 @@ These paired plots make the data-cleaning step easy to compare: the original dis
 - ⚖️ Standard scaling of selected numeric fields
 
 If model training is added later, the data should be split first and the scaler fitted on training data only (for example, in a scikit-learn pipeline) to avoid leakage.
+
+<br><br>
 
 ## 💻 Run it locally
 
@@ -142,6 +156,8 @@ jupyter notebook heart_disease_eda.ipynb
 
 ▶️ Run the notebook cells from top to bottom. The CSV is read from the repository root.
 
+<br><br>
+
 ## 📁 Repository contents
 
 ```text
@@ -152,6 +168,8 @@ heart-disease-exploratory-data-analysis/
 ├── images/                   # Exported notebook charts for this README
 └── README.md
 ```
+
+<br><br>
 
 ## 🗂️ Dataset
 
